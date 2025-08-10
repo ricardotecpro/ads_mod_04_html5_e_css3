@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Material Design</title>
+    
+    <!-- Google Fonts & Icons -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.4.2/mdb.min.css">
+    
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="bg-light">
+    
+    <div class="container d-flex justify-content-center align-items-center vh-100">
+        <div class="card p-5 shadow-lg login-card">
+            <div class="text-center">
+                <img src="img/logo.png" alt="Logo" class="logo mb-3">
+                <h4 class="mb-4">Bem-vindo(a)!</h4>
+            </div>
+
+            <form id="loginForm">
+                <!-- Campo de e-mail -->
+                <div class="form-outline mb-3">
+                    <input type="email" id="email" class="form-control" required />
+                    <label class="form-label" for="email">E-mail</label>
+                    <div class="invalid-feedback">Digite um e-mail válido.</div>
+                </div>
+                
+                <!-- Campo de senha -->
+                <div class="form-outline mb-3">
+                    <input type="password" id="password" class="form-control" required />
+                    <label class="form-label" for="password">Senha</label>
+                    <div class="invalid-feedback">A senha é obrigatória.</div>
+                </div>
+
+                <!-- Botão de login -->
+                <button type="submit" class="btn btn-primary btn-block ripple-surface">Entrar</button>
+
+                <!-- Links -->
+                <div class="text-center mt-3">
+                    <a href="#" class="text-decoration-none">Esqueci minha senha</a>
+                </div>
+
+                <!-- Login social -->
+                <div class="text-center mt-4">
+                    <p class="text-muted">Ou entre com</p>
+                    <button type="button" class="btn btn-outline-danger btn-floating mx-1"><i class="fab fa-google"></i></button>
+                    <button type="button" class="btn btn-outline-primary btn-floating mx-1"><i class="fab fa-facebook"></i></button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- MDBootstrap JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.4.2/mdb.min.js"></script>
+    <!-- FontAwesome Icons -->
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <!-- Custom Script -->
+    <script src="js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,9 @@
+body {
+    font-family: 'Roboto', sans-serif;
+}
+.card {
+    border-radius: 12px;
+}
+.ripple-surface {
+    transition: all 0.3s ease-in-out;
+}

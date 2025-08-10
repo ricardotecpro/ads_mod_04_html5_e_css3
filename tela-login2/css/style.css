@@ -1,0 +1,23 @@
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+.login-card {
+    width: 400px;
+    border-radius: 12px;
+    background: white;
+}
+
+.logo {
+    width: 80px;
+}
+
+.ripple-surface {
+    transition: all 0.3s ease-in-out;
+}
+
+.btn-floating {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
