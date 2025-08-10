@@ -317,4 +317,3 @@ Parabéns\! Você concluiu o curso e agora tem uma base sólida nas práticas ma
   * **Pré-processadores CSS (Sass)**: Para escrever CSS com superpoderes.
   * **Frameworks (React, Vue, Angular)**: Para construir aplicações web complexas.
 
-Continue praticando e construindo projetos. A jornada do desenvolvedor é contínua e cheia de aprendizados. Boa sorte\!
