@@ -317,3 +317,6 @@ Parabéns\! Você concluiu o curso e agora tem uma base sólida nas práticas ma
   * **Pré-processadores CSS (Sass)**: Para escrever CSS com superpoderes.
   * **Frameworks (React, Vue, Angular)**: Para construir aplicações web complexas.
 
+---
+
+### [ricardotecpro.github.io](https://ricardotecpro.github.io/)
