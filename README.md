@@ -1,4 +1,4 @@
-# Curso de HTML e CSS: Do Básico às Práticas Modernas 🚀
+# HTML e CSS: Do Básico às Práticas Modernas 🚀
 
 Bem-vindo ao curso de desenvolvimento web com foco em HTML e CSS\! Este material foi projetado para levar você do zero ao conhecimento necessário para construir interfaces web modernas, responsivas e acessíveis.
 
