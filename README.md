@@ -313,7 +313,9 @@ Parabéns\! Você concluiu o curso e agora tem uma base sólida nas práticas ma
 **O que estudar agora?**
 
   * **JavaScript**: Para adicionar interatividade às suas páginas.
+  * **TypeScript
   * **Animações CSS**: Para criar transições e efeitos visuais.
+  * **BooStrap
   * **Pré-processadores CSS (Sass)**: Para escrever CSS com superpoderes.
   * **Frameworks (React, Vue, Angular)**: Para construir aplicações web complexas.
 
