@@ -1,0 +1,324 @@
+# HTML e CSS: Do Básico às Práticas Modernas 🚀
+
+Bem-vindo ao curso de desenvolvimento web com foco em HTML e CSS\! Este material foi projetado para levar você do zero ao conhecimento necessário para construir interfaces web modernas, responsivas e acessíveis.
+
+**Para quem é este curso?**
+
+  * Iniciantes que nunca escreveram uma linha de código.
+  * Pessoas que já tiveram algum contato com HTML/CSS, mas querem se atualizar sobre as práticas do mercado.
+  * Desenvolvedores de outras áreas que desejam entender os fundamentos do front-end.
+
+**O que você vai aprender?**
+
+  * Criar a estrutura semântica de um site com **HTML5**.
+  * Estilizar páginas de forma eficiente e escalável com **CSS3**.
+  * Construir layouts complexos e flexíveis com **Flexbox** e **CSS Grid**.
+  * Desenvolver sites que funcionam em qualquer dispositivo com **Design Responsivo**.
+  * Organizar seu código com a metodologia **BEM** e usar **Variáveis CSS** para criar sistemas de design consistentes.
+
+-----
+
+## Módulo 1: Fundamentos do HTML - A Estrutura da Web 뼈
+
+Neste módulo, vamos construir o esqueleto da nossa página, entendendo a importância de uma estrutura bem-organizada e semântica.
+
+### 1.1. O que é HTML?
+
+HTML (HyperText Markup Language) não é uma linguagem de programação, mas sim uma **linguagem de marcação**. Ela descreve a estrutura e o conteúdo de uma página web usando "tags". Pense nela como a planta baixa e a estrutura de uma casa.
+
+### 1.2. Estrutura Básica de um Documento
+
+Todo arquivo HTML segue uma estrutura padrão:
+
+```html
+<!DOCTYPE html> <html lang="pt-br"> <head>
+    <meta charset="UTF-8"> <meta name="viewport" content="width=device-width, initial-scale=1.0"> <title>Minha Primeira Página</title> </head>
+<body>
+    </body>
+</html>
+```
+
+### 1.3. ✨ Prática Moderna: HTML Semântico
+
+Antigamente, usávamos `<div>` para tudo. Hoje, a prática moderna é usar **tags semânticas**, que descrevem o significado do seu conteúdo. Isso é crucial para **acessibilidade** (leitores de tela) e **SEO** (mecanismos de busca).
+
+| Tag Semântica | Uso |
+| :--- | :--- |
+| `<header>` | Cabeçalho da página ou de uma seção. |
+| `<nav>` | Links de navegação principais. |
+| `<main>` | Conteúdo principal e único da página. |
+| `<section>` | Uma seção temática do conteúdo. |
+| `<article>` | Um conteúdo autossuficiente (post de blog, notícia). |
+| `<aside>` | Conteúdo secundário, como uma barra lateral. |
+| `<footer>` | Rodapé da página ou de uma seção. |
+
+**Exemplo:**
+
+```html
+<div id="header">...</div>
+<div class="main-content">...</div>
+<div id="footer">...</div>
+
+<header>...</header>
+<main>...</main>
+<footer>...</footer>
+```
+
+### 1.4. Atividade Prática ✍️
+
+Crie um arquivo `index.html` e estruture uma página simples sobre você, usando as tags semânticas `<header>`, `<main>`, `<footer>` e outras tags básicas como `<h1>` (título principal), `<p>` (parágrafo) e `<img>` (imagem). Não se preocupe com o estilo ainda\!
+
+-----
+
+## Módulo 2: Fundamentos do CSS - Estilizando a Web 🎨
+
+Agora que temos a estrutura, vamos dar vida e estilo a ela com CSS (Cascading Style Sheets).
+
+### 2.1. O que é CSS e como incluí-lo?
+
+CSS é a linguagem que usamos para estilizar os elementos HTML. A forma mais recomendada de incluí-lo é através de um **arquivo externo**.
+
+No seu `<head>` do HTML:
+
+```html
+<link rel="stylesheet" href="style.css">
+```
+
+No seu arquivo `style.css`:
+
+```css
+/* seletor { propriedade: valor; } */
+body {
+    background-color: #f0f0f0;
+    font-family: sans-serif;
+}
+```
+
+### 2.2. ✨ Prática Moderna: Box Model e CSS Reset
+
+Todo elemento HTML é uma caixa. O `box-sizing` controla como o tamanho dessa caixa é calculado. A prática moderna universal é usar `border-box`.
+
+Adicionalmente, os navegadores aplicam estilos padrão diferentes. Um **CSS Reset** zera esses estilos para garantir consistência.
+
+Coloque este código no topo do seu arquivo `style.css`:
+
+```css
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+```
+
+### 2.3. ✨ Prática Moderna: Unidades Relativas (rem)
+
+Em vez de usar pixels (`px`) para tamanhos de fonte e espaçamentos, a prática moderna prefere unidades relativas como `rem`.
+
+  * **`px` (pixel)**: Unidade absoluta e fixa.
+  * **`rem` (root em)**: Unidade relativa ao tamanho da fonte da tag `<html>`. Se o usuário aumentar o tamanho da fonte padrão do navegador por questões de acessibilidade, toda a sua interface se ajustará proporcionalmente.
+
+<!-- end list -->
+
+```css
+html {
+  font-size: 16px; /* O padrão da maioria dos navegadores */
+}
+
+h1 {
+  font-size: 2rem; /* 2 * 16px = 32px */
+}
+
+p {
+  font-size: 1rem; /* 1 * 16px = 16px */
+  margin-top: 1.5rem; /* 1.5 * 16px = 24px */
+}
+```
+
+### 2.4. Atividade Prática ✍️
+
+Crie um arquivo `style.css` e aplique estilos básicos à sua página `index.html`. Defina cores, altere fontes e use a unidade `rem` para tamanhos e espaçamentos. Não se esqueça de adicionar o CSS Reset no início\!
+
+-----
+
+## Módulo 3: Layouts Modernos com Flexbox e Grid 🏗️
+
+Esqueça `float` e `position` para criar layouts. As ferramentas modernas para isso são Flexbox e CSS Grid.
+
+### 3.1. Flexbox
+
+Ideal para alinhar itens em **uma dimensão** (uma linha ou uma coluna). Perfeito para componentes como cabeçalhos, menus de navegação e alinhamento de itens em um cartão.
+
+**Exemplo: Um cabeçalho de navegação**
+
+```html
+<nav class="main-nav">
+  <a href="#">Home</a>
+  <a href="#">Sobre</a>
+  <a href="#">Contato</a>
+</nav>
+```
+
+```css
+.main-nav {
+  display: flex; /* Ativa o Flexbox */
+  justify-content: space-around; /* Distribui os itens horizontalmente */
+  align-items: center; /* Centraliza os itens verticalmente */
+  padding: 1rem;
+  background-color: #333;
+}
+```
+
+### 3.2. CSS Grid
+
+Ideal para layouts em **duas dimensões** (linhas e colunas). Perfeito para o layout geral da página ou para galerias de imagens.
+
+**Exemplo: Uma galeria de cartões**
+
+```html
+<div class="card-gallery">
+  <div class="card">...</div>
+  <div class="card">...</div>
+  <div class="card">...</div>
+</div>
+```
+
+```css
+.card-gallery {
+  display: grid; /* Ativa o Grid */
+  /* Cria 3 colunas de tamanho igual e flexível */
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem; /* Espaçamento entre os itens do grid */
+}
+```
+
+### 3.3. Atividade Prática ✍️
+
+Refatore sua página para ter um cabeçalho com navegação usando **Flexbox** e crie uma seção no `<main>` com uma grade de cartões (pode ser com texto simples dentro) usando **CSS Grid**.
+
+-----
+
+## Módulo 4: Tópicos Avançados e Responsividade 📱
+
+Neste módulo, faremos nosso site se adaptar a qualquer tela e organizaremos nosso CSS de forma profissional.
+
+### 4.1. ✨ Prática Moderna: Design Responsivo com Media Queries
+
+Media Queries permitem aplicar estilos CSS apenas sob certas condições, como a largura da tela. A abordagem **Mobile First** (começar estilizando para telas pequenas) é a mais recomendada.
+
+```css
+/* Estilos base (para mobile) */
+.container {
+  width: 100%;
+  padding: 1rem;
+}
+
+/* Estilos para telas maiores (ex: tablets e desktops) */
+@media (min-width: 768px) {
+  .container {
+    max-width: 800px;
+    margin: 0 auto; /* Centraliza o container */
+  }
+
+  .card-gallery {
+    grid-template-columns: repeat(3, 1fr); /* 3 colunas em telas maiores */
+  }
+}
+```
+
+### 4.2. ✨ Prática Moderna: Metodologia BEM
+
+BEM (Block, Element, Modifier) é uma convenção de nomenclatura que torna seu CSS mais legível, reutilizável e escalável.
+
+  * **Block**: Um componente autônomo (`.card`, `.nav`).
+  * **Element**: Uma parte de um bloco (`.card__title`, `.nav__link`).
+  * **Modifier**: Uma variação de um bloco ou elemento (`.card--dark`, `.nav__link--active`).
+
+<!-- end list -->
+
+```html
+<div class="card card--featured">
+  <h2 class="card__title">Título do Card</h2>
+  <button class="card__button card__button--primary">Saiba mais</button>
+</div>
+```
+
+### 4.3. ✨ Prática Moderna: Variáveis CSS (Custom Properties)
+
+Variáveis CSS permitem que você armazene valores para reutilizar em seu código. É excelente para criar sistemas de design e temas (como um modo escuro).
+
+```css
+:root {
+  --cor-primaria: #007bff;
+  --cor-texto: #333;
+  --tamanho-fonte-base: 1rem;
+}
+
+body {
+  color: var(--cor-texto);
+  font-size: var(--tamanho-fonte-base);
+}
+
+.button-primary {
+  background-color: var(--cor-primaria);
+}
+```
+
+### 4.4. Atividade Prática ✍️
+
+1.  Torne sua página totalmente responsiva usando **Media Queries**.
+2.  Refatore seu CSS para usar a metodologia **BEM** em suas classes.
+3.  Defina e utilize **Variáveis CSS** para as cores e fontes principais do seu site.
+
+-----
+
+## Módulo 5: Projeto Final - Construindo um Cartão de Perfil Moderno 🌟
+
+Vamos aplicar tudo o que aprendemos para criar um componente final: um cartão de perfil responsivo.
+
+**Requisitos:**
+
+1.  **HTML Semântico**: Use as tags apropriadas.
+2.  **Layout**: Use Flexbox e/ou Grid para o layout interno do cartão.
+3.  **Responsividade**: O cartão deve se adaptar bem em telas pequenas e grandes.
+4.  **Estilo Profissional**: Use Variáveis CSS e a metodologia BEM.
+
+**Estrutura Sugerida:**
+
+```html
+<article class="profile-card">
+  <header class="profile-card__header">
+    <img class="profile-card__avatar" src="url-da-sua-foto.jpg" alt="Foto de Perfil de [Seu Nome]">
+  </header>
+  <main class="profile-card__body">
+    <h1 class="profile-card__name">[Seu Nome]</h1>
+    <p class="profile-card__role">Desenvolvedor(a) Front-end</p>
+    <p class="profile-card__bio">Uma breve descrição sobre suas paixões e habilidades em tecnologia.</p>
+  </main>
+  <footer class="profile-card__footer">
+    <a href="#" class="profile-card__link">GitHub</a>
+    <a href="#" class="profile-card__link">LinkedIn</a>
+    <a href="#" class="profile-card__link">Twitter</a>
+  </footer>
+</article>
+```
+
+Tente construir o CSS para este cartão sozinho. Use sua criatividade\!
+
+-----
+
+## Conclusão e Próximos Passos 🎉
+
+Parabéns\! Você concluiu o curso e agora tem uma base sólida nas práticas mais modernas de HTML e CSS. Você é capaz de criar páginas web bem-estruturadas, estilosas e responsivas.
+
+**O que estudar agora?**
+
+  * **JavaScript**: Para adicionar interatividade às suas páginas.
+  * **TypeScript
+  * **Animações CSS**: Para criar transições e efeitos visuais.
+  * **BooStrap
+  * **Pré-processadores CSS (Sass)**: Para escrever CSS com superpoderes.
+  * **Frameworks (React, Vue, Angular)**: Para construir aplicações web complexas.
+
+---
+
+### [ricardotecpro.github.io](https://ricardotecpro.github.io/)
